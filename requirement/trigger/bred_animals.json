@@ -32,17 +32,17 @@
     "partner": {
       "oneOf": [
         {
-          "$ref": "../general/entity.json"
+          "$ref": "../../general/entity.json"
         },
         {
-          "$ref": "../general/predicates.json"
+          "$ref": "../../general/predicates.json"
         }
       ]
     },
     "player": {
       "type": "array",
       "items": {
-        "$ref": "../general/predicates.json"
+        "$ref": "../../general/predicates.json"
       }
     }
   }
