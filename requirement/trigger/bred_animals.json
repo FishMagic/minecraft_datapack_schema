@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:bred_animals",
+  "type": "object",
+  "properties": {
+    "child": {
+      "oneOf": [
+        {
+          "$ref": "../../general/entity.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "../../general/predicates.json"
+          }
+        }
+      ]
+    },
+    "parent": {
+      "oneOf": [
+        {
+          "$ref": "../../general/entity.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "../../general/predicates.json"
+          }
+        }
+      ]
+    },
+    "partner": {
+      "oneOf": [
+        {
+          "$ref": "../general/entity.json"
+        },
+        {
+          "$ref": "../general/predicates.json"
+        }
+      ]
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../general/predicates.json"
+      }
+    }
+  }
+}

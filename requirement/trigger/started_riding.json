@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:started_riding",
+  "type": "object",
+  "properties": {
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

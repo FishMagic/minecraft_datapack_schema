@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:location",
+  "properties": {
+    "biome": {
+      "$ref": "./biomes.json"
+    },
+    "block": {
+      "type": "object",
+      "properties": {
+        "block": {
+          "$ref": "./items.json"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "nbt": {
+          "type": "string"
+        },
+        "state": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "integer"
+                },
+                "min": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "dimension": {
+      "$ref": "./dimensions.json"
+    },
+    "feature": {
+      "$ref": "./features.json"
+    },
+    "fluid": {
+      "fluid": {
+        "$ref": "./items.json"
+      },
+      "tag": {
+        "type": "string"
+      },
+      "nbt": {
+        "type": "string"
+      },
+      "state": {
+        "oneOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "max": {
+                "type": "integer"
+              },
+              "min": {
+                "type": "integer"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "light": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "integer"
+                },
+                "min": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        },
+        "y": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "integer"
+                },
+                "min": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        },
+        "z": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "integer"
+                },
+                "min": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "smokey": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:bee_nest_destroyed",
+  "properties": {
+    "block": {
+      "type": "string",
+      "enum": [
+        "minecraft:beehive",
+        "minecraft:bee_nest"
+      ]
+    },
+    "item": {
+      "$ref": "../../general/item.json"
+    },
+    "num_bees_inside": {
+      "type": "integer"
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

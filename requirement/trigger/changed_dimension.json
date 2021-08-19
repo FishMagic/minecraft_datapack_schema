@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:changed_dimension",
+  "type": "object",
+  "properties": {
+    "from": {
+      "$ref": "../../general/dimensions.json"
+    },
+    "to": {
+      "$ref": "../../general/dimensions.json"
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

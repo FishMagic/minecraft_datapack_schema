@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:value_check",
+  "oneOf": [
+    {
+      "type": "integer"
+    },
+    {
+      "type": "number"
+    },
+    {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "constant"
+              ]
+            },
+            "value": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "uniform"
+              ]
+            },
+            "min": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#"
+                }
+              ]
+            },
+            "max": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "binomial"
+              ]
+            },
+            "n": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#"
+                }
+              ]
+            },
+            "p": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "score"
+              ]
+            },
+            "target": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "this",
+                    "killer",
+                    "direct_killer",
+                    "player_killer"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "oneOf": [
+                    {
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "fixed"
+                          ]
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    {
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "context"
+                          ]
+                        },
+                        "target": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "score": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

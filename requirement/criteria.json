@@ -1,0 +1,579 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:criteria",
+  "type": "object",
+  "oneOf": [
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:bee_nest_destroyed"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/bee_nest_destroyed.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:bred_animals"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/bred_animals.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:brewed_potion"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/brewed_potion.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:changed_dimension"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/changed_dimension.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:channeled_lightning"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/channeled_lightning.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:construct_beacon"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/construct_beacon.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:consume_item"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/consume_item.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:cured_zombie_villager"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/cured_zombie_villager.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:effects_changed"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/effects_changed.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:enchanted_item"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/enchanted_item.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:enter_block"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/enter_block.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:entity_hurt_player"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/entity_hurt_player.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:entity_killed_player"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/entity_killed_player.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:filled_bucket"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/filled_bucket.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:fishing_rod_hooked"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/fishing_rod_hooked.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:hero_of_the_village"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/hero_of_the_village.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:impossible"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/impossible.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:inventory_changed"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/inventory_changed.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:item_durability_changed"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/item_durability_changed.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:item_used_on_block"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/item_used_on_block.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:killed_by_crossbow"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/killed_by_crossbow.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:levitation"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/levitation.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:location"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/location.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:nether_travel"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/nether_travel.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:placed_block"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/placed_block.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:player_generates_container_loot"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/player_generates_container_loot.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:player_hurt_entity"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/player_hurt_entity.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:player_interacted_with_entity"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/player_interacted_with_entity.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:player_killed_entity"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/player_killed_entity.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:recipe_unlocked"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/recipe_unlocked.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:shot_crossbow"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/shot_crossbow.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:slept_in_bed"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/slept_in_bed.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:slide_down_block"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/slide_down_block.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:started_riding"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/started_riding.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:summoned_entity"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/summoned_entity.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:tame_animal"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/tame_animal.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:target_hit"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/target_hit.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:thrown_item_picked_up_by_entity"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/thrown_item_picked_up_by_entity.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:tick"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/tick.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:minecraft:used_ender_eye"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/used_ender_eye.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:minecraft:used_totem"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/used_totem.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:minecraft:using_item"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/using_item.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:minecraft:villager_trade"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/villager_trade.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "enum": [
+            "minecraft:minecraft:voluntary_exile"
+          ]
+        },
+        "conditions": {
+          "$ref": "./trigger/voluntary_exile.json"
+        }
+      }
+    }
+  ]
+}

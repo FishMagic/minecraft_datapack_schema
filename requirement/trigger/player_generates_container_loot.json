@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:player_generates_container_loot",
+  "type": "object",
+  "properties": {
+    "loot_table": {
+      "type": "string"
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

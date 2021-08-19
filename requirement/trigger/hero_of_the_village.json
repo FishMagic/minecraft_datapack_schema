@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:hero_of_the_village",
+  "type": "object",
+  "properties": {
+    "location": {
+      "$ref": "../../general/location.json"
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

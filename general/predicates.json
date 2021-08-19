@@ -1,0 +1,315 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:predicate",
+  "type": "object",
+  "oneOf": [
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "alternative"
+          ]
+        },
+        "terms": {
+          "$ref": "#"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "block_state_property"
+          ]
+        },
+        "block": {
+          "$ref": "./items.json"
+        },
+        "properties": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "damage_source_properties"
+          ]
+        },
+        "predicate": {
+          "$ref": "./damage_type.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "entity_properties"
+          ]
+        },
+        "entity": {
+          "type": "string",
+          "enum": [
+            "this",
+            "killer",
+            "killer_player"
+          ]
+        },
+        "predicate": {
+          "$ref": "./entity.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "entity_scores"
+          ]
+        },
+        "entity": {
+          "type": "string",
+          "enum": [
+            "this",
+            "killer",
+            "killer_player"
+          ]
+        },
+        "scores": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "integer"
+                },
+                "min": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "inverted"
+          ]
+        },
+        "term": {
+          "$ref": "#"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "killed_by_player"
+          ]
+        },
+        "inverse": {
+          "type": "boolean"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "location_check "
+          ]
+        },
+        "offsetX": {
+          "type": "integer"
+        },
+        "offsetY": {
+          "type": "integer"
+        },
+        "offsetZ": {
+          "type": "integer"
+        },
+        "predicate": {
+          "$ref": "./location.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "match_tool"
+          ]
+        },
+        "predicate": {
+          "$ref": "./item.json"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "random_chance"
+          ]
+        },
+        "chance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "random_chance_with_looting"
+          ]
+        },
+        "chance": {
+          "type": "number"
+        },
+        "looting_multiplier": {
+          "type": "number"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "reference"
+          ]
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "survives_explosion"
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "table_bonus"
+          ]
+        },
+        "enchantment": {
+          "type": "integer"
+        },
+        "chances": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "time_check"
+          ]
+        },
+        "value": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "integer"
+                },
+                "min": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        },
+        "period": {
+          "type": "integer"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "weather_check"
+          ]
+        },
+        "raining": {
+          "type": "boolean"
+        },
+        "thundering": {
+          "type": "boolean"
+        }
+      }
+    },
+    {
+      "properties": {
+        "condition": {
+          "type": "string",
+          "enum": [
+            "value_check"
+          ]
+        },
+        "value": {
+          "$ref": "./value_check.json"
+        },
+        "range": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "integer"
+                },
+                "min": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

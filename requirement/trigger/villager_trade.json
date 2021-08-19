@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:villager_trade",
+  "type": "object",
+  "properties": {
+    "item": {
+      "$ref": "../../general/item.json"
+    },
+    "villager": {
+      "oneOf": [
+        {
+          "$ref": "../../general/entity.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "../../general/predicates.json"
+          }
+        }
+      ]
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:enchanted_item",
+  "type": "object",
+  "properties": {
+    "item": {
+      "$ref": "../../general/item.json"
+    },
+    "level": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

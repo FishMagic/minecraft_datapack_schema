@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:enter_block",
+  "type": "object",
+  "properties": {
+    "block": {
+      "$ref": "../../general/items.json"
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

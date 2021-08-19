@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:channeled_lightning",
+  "type": "object",
+  "properties": {
+    "victims": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "../../general/entity.json"
+          },
+          {
+            "$ref": "../../general/predicates.json"
+          }
+        ]
+      }
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

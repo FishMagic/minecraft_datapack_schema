@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:effects_changed",
+  "type": "object",
+  "properties": {
+    "effects": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "../../general/effects.json"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "amplifier": {
+            "oneOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "type": "integer"
+                  },
+                  "max": {
+                    "type": "integer"
+                  }
+                }
+              }
+            ]
+          },
+          "duration": {
+            "oneOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

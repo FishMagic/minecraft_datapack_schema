@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:feature",
+  "type": "string",
+  "enum": [
+    "buried_treasure",
+    "endcity",
+    "fortress",
+    "mansion",
+    "mineshaft",
+    "monument",
+    "ocean_ruin",
+    "shipwreck",
+    "stronghold",
+    "desert_pyramid",
+    "igloo",
+    "jungle_pyramid",
+    "swamp_hut",
+    "village",
+    "pillager_outpost",
+    "nether_fossil",
+    "bastion_remnant",
+    "ruined_portals"
+  ]
+}

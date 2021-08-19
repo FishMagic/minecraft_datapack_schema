@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:killed_by_crossbow,",
+  "type": "object",
+  "properties": {
+    "unique_entity_types": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "victims": {
+      "oneOf": [
+        {
+          "$ref": "../../general/entity.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "../../general/predicates.json"
+          }
+        }
+      ]
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

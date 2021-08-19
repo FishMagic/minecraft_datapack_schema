@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.datapack:advancements",
+  "title": "Advancements",
+  "type": "object",
+  "properties": {
+    "display": {
+      "type": "object",
+      "properties": {
+        "icon": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "$ref": "#/def/directSelector"
+            },
+            "nbt": {
+              "type": "string"
+            }
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "frame": {
+          "type": "string",
+          "enum": [
+            "challenge",
+            "goal",
+            "task"
+          ],
+          "default": "task"
+        },
+        "background": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "show_toast": {
+          "type": "boolean",
+          "default": true
+        },
+        "announce_to_chat": {
+          "type": "boolean",
+          "default": true
+        },
+        "hidden": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "display",
+        "title",
+        "frame",
+        "description"
+      ]
+    },
+    "parent": {
+      "type": "string"
+    },
+    "criteria": {
+      "type": "object",
+      "additionalProperties": {
+        "properties": {
+          "trigger": {
+            "$ref": "../requirement/criteria.json"
+          }
+        }
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "minItems": 1
+    },
+    "rewards": {
+      "type": "object",
+      "properties": {
+        "recipes": {
+          "type": "array"
+        },
+        "loot": {
+          "type": "array"
+        },
+        "experience": {
+          "type": "integer"
+        },
+        "function": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "display",
+    "criteria",
+    "requirements"
+  ],
+  "def": {
+    "selector": {
+      "oneOf": [
+        {
+          "properties": {
+            "item": {
+              "$ref": "#/def/directSelector"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "tag": {
+              "type": "string",
+              "pattern": "^([a-z0-9\\-_]+:)?([a-z0-9\\-_]+/)*[a-z0-9\\-_]+$"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "directSelector": {
+      "$ref": "../general/items.json"
+    }
+  }
+}

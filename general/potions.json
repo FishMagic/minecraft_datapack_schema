@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:potions",
+  "type": "string",
+  "enum": [
+    "item.minecraft.potion",
+    "item.minecraft.potion.effect.empty",
+    "item.minecraft.potion.effect.water",
+    "item.minecraft.potion.effect.mundane",
+    "item.minecraft.potion.effect.thick",
+    "item.minecraft.potion.effect.awkward",
+    "item.minecraft.potion.effect.night_vision",
+    "item.minecraft.potion.effect.invisibility",
+    "item.minecraft.potion.effect.leaping",
+    "item.minecraft.potion.effect.fire_resistance",
+    "item.minecraft.potion.effect.swiftness",
+    "item.minecraft.potion.effect.slowness",
+    "item.minecraft.potion.effect.water_breathing",
+    "item.minecraft.potion.effect.healing",
+    "item.minecraft.potion.effect.harming",
+    "item.minecraft.potion.effect.poison",
+    "item.minecraft.potion.effect.regeneration",
+    "item.minecraft.potion.effect.strength",
+    "item.minecraft.potion.effect.weakness",
+    "item.minecraft.potion.effect.levitation",
+    "item.minecraft.potion.effect.luck",
+    "item.minecraft.potion.effect.turtle_master",
+    "item.minecraft.potion.effect.slow_falling"
+  ]
+}

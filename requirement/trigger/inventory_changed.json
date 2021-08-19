@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:inventory_changed",
+  "type": "object",
+  "properties": {
+    "item": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/item.json"
+      }
+    },
+    "slot": {
+      "type": "object",
+      "properties": {
+        "empty": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        },
+        "full": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        },
+        "occupied": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

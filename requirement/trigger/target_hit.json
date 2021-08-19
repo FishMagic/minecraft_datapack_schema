@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:target_hit",
+  "type": "object",
+  "properties": {
+    "signal_strength": {
+      "type": "integer"
+    },
+    "projectile": {
+      "type": "string"
+    },
+    "shooter": {
+      "$ref": "../../general/entity.json"
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

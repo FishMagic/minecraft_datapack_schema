@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:entity",
+  "properties": {
+    "distance": {
+      "type": "object",
+      "properties": {
+        "absolute": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            }
+          }
+        },
+        "horizontal": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            }
+          }
+        },
+        "x": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            }
+          }
+        },
+        "y": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "effects": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "./effects.json"
+      },
+      "items": {
+        "properties": {
+          "amplifier": {
+            "oneOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "max": {
+                    "type": "number"
+                  },
+                  "min": {
+                    "type": "number"
+                  }
+                }
+              }
+            ]
+          },
+          "duration": {
+            "oneOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "max": {
+                    "type": "number"
+                  },
+                  "min": {
+                    "type": "number"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "equipment": {
+      "type": "object",
+      "properties": {
+        "mainhand": {
+          "$ref": "./item.json"
+        },
+        "offhand": {
+          "$ref": "./item.json"
+        },
+        "head": {
+          "$ref": "./item.json"
+        },
+        "chest": {
+          "$ref": "./item.json"
+        },
+        "legs": {
+          "$ref": "./item.json"
+        },
+        "feet": {
+          "$ref": "./item.json"
+        }
+      }
+    },
+    "flags": {
+      "type": "object",
+      "properties": {
+        "is_on_fire": {
+          "type": "boolean"
+        },
+        "is_sneaking": {
+          "type": "boolean"
+        },
+        "is_sprinting": {
+          "type": "boolean"
+        },
+        "is_swimming": {
+          "type": "boolean"
+        },
+        "is_baby": {
+          "type": "boolean"
+        }
+      }
+    },
+    "fishing_hook": {
+      "type": "object",
+      "properties": {
+        "in_open_water": {
+          "type": "boolean"
+        }
+      }
+    },
+    "location": {
+      "$ref": "./location.json"
+    },
+    "nbt": {
+      "type": "string"
+    },
+    "player": {
+      "$ref": "./player.json"
+    },
+    "team": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "targeted_entity": {
+      "$ref": "#"
+    },
+    "vehicle": {
+      "$ref": "#"
+    }
+  }
+}

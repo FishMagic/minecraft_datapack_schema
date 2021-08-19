@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft.datapack.trigger:item_used_on_block",
+  "type": "object",
+  "properties": {
+    "location": {
+      "$ref": "../../general/location.json"
+    },
+    "item": {
+      "$ref": "../../general/item.json"
+    },
+    "player": {
+      "type": "array",
+      "items": {
+        "$ref": "../../general/predicates.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "mc.ftmc.minecraft:damage",
+  "type": "object",
+  "properties": {
+    "blocked": {
+      "type": "boolean"
+    },
+    "dealt": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "direct_entity": {
+      "$ref": "./entity.json"
+    },
+    "source_entity": {
+      "$ref": "./entity.json"
+    },
+    "taken": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "type": {
+      "$ref": "./damage_type.json"
+    }
+  }
+}

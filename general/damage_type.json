@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:damage_type",
+  "properties": {
+    "bypasses_armor": {
+      "type": "boolean"
+    },
+    "bypasses_invulnerability": {
+      "type": "boolean"
+    },
+    "bypasses_magic": {
+      "type": "boolean"
+    },
+    "direct_entity": {
+      "$ref": "./entity.json"
+    },
+    "is_explosion": {
+      "type": "boolean"
+    },
+    "is_fire": {
+      "type": "boolean"
+    },
+    "is_magic": {
+      "type": "boolean"
+    },
+    "is_projectile": {
+      "type": "boolean"
+    },
+    "is_lightning": {
+      "type": "boolean"
+    },
+    "source_entity": {
+      "$ref": "./entity.json"
+    }
+  }
+}

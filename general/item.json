@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "me.ftmc.minecraft:item",
+  "properties": {
+    "count": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "enchantments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enchantment": {
+            "type": "string",
+            "$ref": "./enchantments.json"
+          },
+          "levels": {
+            "oneOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "max": {
+                    "type": "integer"
+                  },
+                  "min": {
+                    "type": "integer"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "additionalItems": false
+      }
+    },
+    "stored_enchantments": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "enchantment": {
+            "type": "string",
+            "$ref": "./enchantments.json"
+          },
+          "levels": {
+            "oneOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "max": {
+                    "type": "integer"
+                  },
+                  "min": {
+                    "type": "integer"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/def/directSelector"
+      }
+    },
+    "nbt": {
+      "type": "string"
+    },
+    "potion": {
+      "type": "string",
+      "$ref": "./potions.json"
+    },
+    "tag": {
+      "type": "string"
+    }
+  },
+  "def": {
+    "selector": {
+      "oneOf": [
+        {
+          "properties": {
+            "item": {
+              "$ref": "#/def/directSelector"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "tag": {
+              "type": "string",
+              "pattern": "^([a-z0-9\\-_]+:)?([a-z0-9\\-_]+/)*[a-z0-9\\-_]+$"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "directSelector": {
+      "anyOf": [
+        {
+          "$ref": "../general/items.json"
+        },
+        {
+          "pattern": "^([a-z0-9\\-_]+:)?([a-z0-9\\-_]+/)*[a-z0-9\\-_]+$"
+        }
+      ]
+    }
+  }
+}
