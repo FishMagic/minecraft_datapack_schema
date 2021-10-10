@@ -125,13 +125,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/def/directSelector"
+                "$ref": "#/def/selector"
               },
               {
                 "type": "array",
                 "minItems": 1,
                 "items": {
-                  "$ref": "#/def/directSelector"
+                  "$ref": "#/def/selector"
                 }
               }
             ]
